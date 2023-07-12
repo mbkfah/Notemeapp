@@ -1,5 +1,5 @@
 export const notes = [
-  { id: 0, body: "My Day ", color: "#34d399" },
-  { id: 1, body: "Next Week", color: "#f87171" },
-  { id: 2, body: "Next Month", color: "#a3e635" },
+  { id: 1, title: "Catatan 1", body: "Isi catatan 1", color: "#FBD38D" },
+  { id: 2, title: "Catatan 2", body: "Isi catatan 2", color: "#B2F5EA" },
+  { id: 3, title: "Catatan 3", body: "Isi catatan 3", color: "#F9C1BC" },
 ];

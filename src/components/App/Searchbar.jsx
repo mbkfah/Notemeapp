@@ -1,4 +1,5 @@
 "use client";
+
 import { Search } from "lucide-react";
 export const Searchbar = ({ onSearchChange }) => {
   return (

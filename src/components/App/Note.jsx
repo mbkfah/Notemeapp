@@ -8,6 +8,7 @@ import { Ban } from "lucide-react";
 
 const Note = ({ id, title, body, color }) => {
   const [onHover, setOnHover] = useState(false);
+  const [IsNotes, setIsNotes] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [noteBody, setBody] = useState(body);
   const [noteColor, setColor] = useState(color);
@@ -58,14 +59,8 @@ const Note = ({ id, title, body, color }) => {
   useEffect(() => {
     const notesData = localStorage.getItem("notes");
     const notesJson = JSON.parse(notesData);
-    setIsNotes(notesJson);
-  }, [id]);
-
-  useEffect(() => {
-    const storedTitle = localStorage.getItem(`title-${id}`);
-    if (storedTitle) {
-      setNoteTitle(storedTitle);
-    }
+    // setIsNotes(notesJson);
+    setIsNotes(true);
   }, [id]);
 
   const handleEditNote = () => {
@@ -165,7 +160,7 @@ const Note = ({ id, title, body, color }) => {
         </div>
         <div
           id={`note-text-${id}`}
-          className="justify-center  pt-4 p-3 pr-6 pl-0 text-justify items-center outline-none text-slate-700 tracking-thight font-semibold absolute"
+          className="justify-center  pt-4 p-3 pr-6 pl-0  items-center outline-none  text-slate-700 tracking-thight font-semibold absolute"
           contentEditable={isEditing}
           onInput={(e) => setBody(e.target.textContent)}
         >
@@ -227,5 +222,4 @@ const Note = ({ id, title, body, color }) => {
     </div>
   );
 };
-
 export default Note;

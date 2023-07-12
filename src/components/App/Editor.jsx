@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { DashboardTemplate } from "../Template/DashboardTemplate";
 import { notes } from "@/lib/dummy/notes";
-import { Note } from "./Note";
+import Note from "./Note";
 
 export const Editor = () => {
   const [notesData, setNotesData] = useState(notes);
